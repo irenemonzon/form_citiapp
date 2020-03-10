@@ -37,32 +37,33 @@ const AddForm = () => {
 
   return (
     <form className="bankform" onSubmit={addform}>
-      <section >
-        <div >
-          <p className="title">Datos Bancarios</p>
-          <label className="name">Nombre y Apellido</label>
+      <section>
+        <div>
+          <p className="title">Por favor, ingresa tus datos bancarios</p>
+          <h3 className="H3">Nombre y Apellido</h3>
           <input
+            className="input"
             type="text"
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
           />
-          <br />
-          <label className="Rut">RUT</label>
+          <h3 className="H3">Rut</h3>
           <input
+            className="input
             type="text"
             value={rut}
             onChange={(e) => setRut(e.currentTarget.value)}
           />
-          <br />
-          <label className="Email">Correo Electronico</label>
+          <h3 className="H3">Correo electrónico</h3>
           <input
+            className="input"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
           <br />
-          <label className="bank">Banco</label>
-          <select value={bank}
+          <h3 className="H3">Banco</h3>
+          <select className="input" value={bank}
             onChange={(e) => setBank((e.currentTarget.value))}>
 
             <option value={-1}>Seleccione Banco</option>
@@ -74,8 +75,8 @@ const AddForm = () => {
             }
           </select>
           <br />
-          <label className="Typeaccount">Tipo de cuenta</label>
-          <select value={typeAccount}
+           <h3 className="H3">Tipo de cuenta</h3>
+          <select  className="input" value={typeAccount}
             onChange={(e) => setTypeAccount((e.currentTarget.value))}>
             <option value={-1}>Seleccione tipo de Cuenta</option>
             {
@@ -85,17 +86,17 @@ const AddForm = () => {
             }
           </select>
           <br />
-          <label className="NumberAccount">Numero de cuenta</label>
+           <h3 className="H3">Número de cuenta</h3>
           <input
+            className="input"
             type="number"
             value={numberAccount}
             onChange={(e) => setNumberAccount(e.currentTarget.value)}
           />
-          <br />
         </div>
       </section>
       <br />
-      <button> Enviar</button>
+      <button className="Btn">Enviar</button>
     </form>
   );
 };
