@@ -49,7 +49,7 @@ const AddForm = () => {
           />
           <h3 className="H3">Rut</h3>
           <input
-            className="input
+            className="input"
             type="text"
             value={rut}
             onChange={(e) => setRut(e.currentTarget.value)}
@@ -75,8 +75,8 @@ const AddForm = () => {
             }
           </select>
           <br />
-           <h3 className="H3">Tipo de cuenta</h3>
-          <select  className="input" value={typeAccount}
+          <h3 className="H3">Tipo de cuenta</h3>
+          <select className="input" value={typeAccount}
             onChange={(e) => setTypeAccount((e.currentTarget.value))}>
             <option value={-1}>Seleccione tipo de Cuenta</option>
             {
@@ -86,10 +86,10 @@ const AddForm = () => {
             }
           </select>
           <br />
-           <h3 className="H3">Número de cuenta</h3>
+          <h3 className="H3">Número de cuenta</h3>
           <input
             className="input"
-            type="number"
+            type="text"
             value={numberAccount}
             onChange={(e) => setNumberAccount(e.currentTarget.value)}
           />
