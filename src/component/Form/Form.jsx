@@ -33,55 +33,55 @@ const AddForm = () => {
 
   return (
     <form className="bankform" onSubmit={addform}>
-      <section >
-        <div >
-          <p className="title">Datos Bancarios</p>
-          <label className="name">Nombre y Apellido</label>
+      <section>
+        <div>
+          <p className="title">Por favor, ingresa tus datos bancarios</p>
+          <h3 className="H3">Nombre y Apellido</h3>
           <input
+            className="input"
             type="text"
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
           />
-          <br />
-          <label className="Rut">RUT</label>
+          <h3 className="H3">Rut</h3>
           <input
+            className="input"
             type="number"
             value={rut}
             onChange={(e) => setRut(e.currentTarget.value)}
           />
-          <br />
-          <label className="Email">Correo Electronico</label>
+          <h3 className="H3">Correo electrónico</h3>
           <input
+            className="input"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
-          <br />
-          <label className="field-description">Banco</label>
+          <h3 className="H3">Banco</h3>
           <input
+            className="input"
             type="text"
             value={bank}
             onChange={(e) => setBank(e.currentTarget.value)}
           />
-          <br />
-          <label className="Typeaccount">Tipo de cuenta</label>
+          <h3 className="H3">Tipo de cuenta</h3>
           <input
+            className="input"
             type="text"
             value={typeAccount}
             onChange={(e) => setTypeAccount(e.currentTarget.value)}
           />
-          <br />
-          <label className="NumberAccount">Numero de cuenta</label>
+          <h3 className="H3">Número de cuenta</h3>
           <input
+            className="input"
             type="number"
             value={numberAccount}
             onChange={(e) => setNumberAccount(e.currentTarget.value)}
           />
-          <br />
         </div>
       </section>
       <br />
-      <button> Enviar</button>
+      <button className="Btn">Enviar</button>
     </form>
   );
 };
