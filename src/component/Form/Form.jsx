@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import db from '../../firebase-config';
 
+const account = [{ id: 0, name: "Cuenta Corriente" }, { id: 1, name: "Chequera electronica" }, { id: 2, name: "Cuenta de ahorro" }, { id: 3, name: "Cuenta Vista" }, { id: 4, name: "Cuenta Rut" }];
+
+const databank = [{ id: 0, name: "Bancoestado" }, { id: 1, name: "Coopeuch" }, { id: 2, name: "Banco BBVA" }, { id: 3, name: "Banco Consorcio" }, { id: 4, name: "Banco Ripley" }, { id: 5, name: "Banco Falabella" }, { id: 6, name: "Banco Segurity" }, { id: 7, name: "Banco Itau" }, { id: 8, name: "Banco Santander" }, { id: 9, name: "Scotiabank Chile" }];
 
 const AddForm = () => {
   const [name, setName] = useState('');
   const [rut, setRut] = useState('');
   const [email, setEmail] = useState('');
-  const [bank, setBank] = useState('');
-  const [typeAccount, setTypeAccount] = useState('');
+  const [bank, setBank] = useState(-1);
+  const [typeAccount, setTypeAccount] = useState(-1);
   const [numberAccount, setNumberAccount] = useState('');
+
 
   function addform(e) {
     e.preventDefault();
@@ -45,7 +49,7 @@ const AddForm = () => {
           <br />
           <label className="Rut">RUT</label>
           <input
-            type="number"
+            type="text"
             value={rut}
             onChange={(e) => setRut(e.currentTarget.value)}
           />
@@ -57,19 +61,29 @@ const AddForm = () => {
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
           <br />
-          <label className="field-description">Banco</label>
-          <input
-            type="text"
-            value={bank}
-            onChange={(e) => setBank(e.currentTarget.value)}
-          />
+          <label className="bank">Banco</label>
+          <select value={bank}
+            onChange={(e) => setBank((e.currentTarget.value))}>
+
+            <option value={-1}>Seleccione Banco</option>
+            {
+              databank.map(item => (
+                <option key={item.id} value={item.name}>{item.name}
+                </option>
+              ))
+            }
+          </select>
           <br />
           <label className="Typeaccount">Tipo de cuenta</label>
-          <input
-            type="text"
-            value={typeAccount}
-            onChange={(e) => setTypeAccount(e.currentTarget.value)}
-          />
+          <select value={typeAccount}
+            onChange={(e) => setTypeAccount((e.currentTarget.value))}>
+            <option value={-1}>Seleccione tipo de Cuenta</option>
+            {
+              account.map(item => (
+                <option key={item.id} value={item.name}>{item.name}</option>
+              ))
+            }
+          </select>
           <br />
           <label className="NumberAccount">Numero de cuenta</label>
           <input
@@ -87,3 +101,4 @@ const AddForm = () => {
 };
 export default AddForm;
 
+//firebase deploy --only hosting:citi-app, datos-bancarios
