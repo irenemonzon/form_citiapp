@@ -13,7 +13,6 @@ const AddForm = () => {
   const [typeAccount, setTypeAccount] = useState(-1);
   const [numberAccount, setNumberAccount] = useState('');
 
-
   function addform(e) {
     e.preventDefault();
     db.collection('Form ')

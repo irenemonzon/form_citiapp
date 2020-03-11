@@ -1,5 +1,21 @@
 {
   "projects": {
+
     "default": "citi-prueba"
   }
 }
+
+    "default": "citi-app",
+    "formulario": "datos-bancarios-e6ed7"
+  },
+  "targets": {
+    "citi-app": {
+      "hosting": {
+        "banco": [
+          "datos-bancarios"
+        ]
+      }
+    }
+  }
+}
+
