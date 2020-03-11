@@ -39,21 +39,23 @@ const AddForm = () => {
       <section>
         <div>
           <p className="title">Por favor, ingresa tus datos bancarios</p>
-          <h3 className="H3">Nombre y Apellido</h3>
+          <label htmlFor="Name and Lastname" className="H3">Nombre y Apellido</label>
           <input
             className="input"
             type="text"
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
           />
-          <h3 className="H3">Rut</h3>
+          <br />
+          <label className="H3">Rut</label>
           <input
             className="input"
             type="text"
             value={rut}
             onChange={(e) => setRut(e.currentTarget.value)}
           />
-          <h3 className="H3">Correo electrónico</h3>
+          <br />
+          <label className="H3">Correo electrónico</label>
           <input
             className="input"
             type="text"
@@ -61,10 +63,9 @@ const AddForm = () => {
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
           <br />
-          <h3 className="H3">Banco</h3>
+          <label className="H3">Banco</label>
           <select className="input" value={bank}
             onChange={(e) => setBank((e.currentTarget.value))}>
-
             <option value={-1}>Seleccione Banco</option>
             {
               databank.map(item => (
@@ -74,7 +75,7 @@ const AddForm = () => {
             }
           </select>
           <br />
-          <h3 className="H3">Tipo de cuenta</h3>
+          <label className="H3">Tipo de cuenta</label>
           <select className="input" value={typeAccount}
             onChange={(e) => setTypeAccount((e.currentTarget.value))}>
             <option value={-1}>Seleccione tipo de Cuenta</option>
@@ -85,7 +86,7 @@ const AddForm = () => {
             }
           </select>
           <br />
-          <h3 className="H3">Número de cuenta</h3>
+          <label className="H3">Número de cuenta</label>
           <input
             className="input"
             type="text"
@@ -100,5 +101,3 @@ const AddForm = () => {
   );
 };
 export default AddForm;
-
-//firebase deploy --only hosting:citi-app, datos-bancarios
