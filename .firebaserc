@@ -1,5 +1,10 @@
 {
   "projects": {
+
+    "default": "citi-prueba"
+  }
+}
+
     "default": "citi-app",
     "formulario": "datos-bancarios-e6ed7"
   },
@@ -13,3 +18,4 @@
     }
   }
 }
+
