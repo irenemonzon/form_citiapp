@@ -9,12 +9,16 @@
 .bankform {
   display: flex;
   flex-direction: column;
-  width: 80%;
   align-items: center;
 }
 
 .items-container {
   align-items: center;
+}
+
+.container-title {
+  align-items: center;
+  width: 70%;
 }
 
 .title {
@@ -24,27 +28,38 @@
 }
 
 .H3 {
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 600;
   margin-bottom: 0;
   margin-top: 20px;
+  letter-spacing: 1px;
 }
 
 .input {
-  border: 2px solid royalblue;
+  border: 2px solid #222222;
   border-radius: 10px;
-  font-size: 14px;
-  padding: 8px;
+  font-size: 16px;
+  padding: 12px;
+  width: 340px;
+  margin-bottom: 30px;
+}
+
+.select {
+  border: 2px solid #222222;
+  border-radius: 10px;
+  font-size: 21px;
+  padding: 20px;
   width: 320px;
+  margin-bottom: 30px;
 }
 
 .Btn{
-  background-color: royalblue;
+  background-color: #222222;
   border: none;
-  border-radius: 10px;
-  padding: 8px;
-  width: 140px;
-  font-size: 16px;
+  border-radius: 25px;
+  padding: 10px;
+  width: 260px;
+  font-size: 21px;
   font-weight: bold;
   text-align: center;
   color: #FFFFFF;
@@ -54,4 +69,52 @@
 
 @media (max-width:640px) {
 
+
+  .bankform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .items-container {
+    align-items: center;
+  }
+
+  .container-title {
+    align-items: center;
+    width: 90%;
+    margin-left: 10px;
+  }
+
+  .title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .H3 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 20px;
+    letter-spacing: 1px;
+  }
+
+  .input {
+    border: 2px solid #222222;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px;
+    width: 260px;
+    margin-bottom: 30px;
+  }
+
+  .select {
+    border: 2px solid #222222;
+    border-radius: 10px;
+    font-size: 21px;
+    padding: 20px;
+    width: 280px;
+    margin-bottom: 30px;
+  }
 }
