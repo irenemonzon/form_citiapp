@@ -37,7 +37,7 @@ const AddForm = () => {
   return (
     <form className="bankform" onSubmit={addform}>
       <section>
-        <div>
+        <div className="container-title">
           <p className="title">Por favor, ingresa tus datos bancarios</p>
           <label htmlFor="Name and Lastname" className="H3">Nombre y Apellido</label>
           <input
@@ -63,8 +63,8 @@ const AddForm = () => {
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
           <br />
-          <label className="H3">Banco</label>
-          <select className="input" value={bank}
+          <label className="H3">Elige tu Banco</label>
+          <select className="select" value={bank}
             onChange={(e) => setBank((e.currentTarget.value))}>
             <option value={-1}>Seleccione Banco</option>
             {
@@ -76,7 +76,7 @@ const AddForm = () => {
           </select>
           <br />
           <label className="H3">Tipo de cuenta</label>
-          <select className="input" value={typeAccount}
+          <select className="select" value={typeAccount}
             onChange={(e) => setTypeAccount((e.currentTarget.value))}>
             <option value={-1}>Seleccione tipo de Cuenta</option>
             {
