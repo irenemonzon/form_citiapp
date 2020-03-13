@@ -3,7 +3,7 @@ import db from '../../firebase-config';
 
 const account = [{ id: 0, name: "Cuenta Corriente" }, { id: 1, name: "Chequera electronica" }, { id: 2, name: "Cuenta de ahorro" }, { id: 3, name: "Cuenta Vista" }, { id: 4, name: "Cuenta Rut" }];
 
-const databank = [{ id: 0, name: "Bancoestado" }, { id: 1, name: "Coopeuch" }, { id: 2, name: "Banco BBVA" }, { id: 3, name: "Banco Consorcio" }, { id: 4, name: "Banco Ripley" }, { id: 5, name: "Banco Falabella" }, { id: 6, name: "Banco Segurity" }, { id: 7, name: "Banco Itau" }, { id: 8, name: "Banco Santander" }, { id: 9, name: "Scotiabank Chile" }];
+const databank = [{ id: 0, name: "Banco estado" }, { id: 1, name: "Coopeuch" }, { id: 2, name: "Banco BBVA" }, { id: 3, name: "Banco Consorcio" }, { id: 4, name: "Banco Ripley" }, { id: 5, name: "Banco Falabella" }, { id: 6, name: "Banco Segurity" }, { id: 7, name: "Banco Itau" }, { id: 8, name: "Banco Santander" }, { id: 9, name: "Scotiabank Chile" }];
 
 const AddForm = () => {
   const [name, setName] = useState('');
